@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body style="background: linear-gradient(to right, #11998e, #38ef7d);">
+
+    <center>
+ <div style="width:30%">  
+    <h1>Cadastro</h1>
+<form  id="form"  method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+<input class="form-control" type="text" name="nome" >
+</div>
+
+<div class="form-group">
+<label for="Email">Email</label>
+<input class="form-control" type="email" name="email" >
+</div>
+
+<div class="form-group">
+<label for="Telefone">Telefone</label>
+<input class="form-control" type="text" name="telefone" >
+</div>
+
+<div class="form-group">
+<label for="Celular">Celular</label>
+<input class="form-control" type="text" name="celular" >
+</div>
+
+
+<label for="Enviar"></label>
+    <button onclick="Submit()" class="btn btn-primary btn-block">Enviar</button>
+
+</form>
+</div> 
+</center>
+</body>
+</html>
+
+
+<script>
+    function Submit() {
+        var inputs, index;
+        
+        inputs = document.getElementsByTagName('input');
+
+        for (index = 0; index < inputs.length; ++index) {
+                alert(inputs[index].value)
+            }
+        document.getElementById("form").submit();
+
+    }
+    </script>
