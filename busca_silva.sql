@@ -6,4 +6,4 @@ SELECT * FROM correspondencia co
 WHERE c.sobrenome 
 LIKE ‘%Silva%’ 
 GROUP BY c.id 
-ORDER BY c.nome
+ORDER BY DESC co.datahora
