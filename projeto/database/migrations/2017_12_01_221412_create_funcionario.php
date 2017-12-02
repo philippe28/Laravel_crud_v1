@@ -13,7 +13,29 @@ class CreateFuncionario extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('funcionario', function (Blueprint $table) {
+            
+                        $table->increments('id');
+            
+                        $table->string('nome');
+            
+                        $table->text('cep');
+
+                        $table->text('endereco');
+
+                        $table->text('bairro');
+
+                        $table->text('cidade');
+
+                        $table->text('estado');
+
+                        $table->integer('empresa_id')->unsigned();
+
+                        $table->foreign('empresa_id')->references('id')->on('empresa');
+            
+                        $table->timestamps();
+            
+                    });
     }
 
     /**
@@ -23,6 +45,6 @@ class CreateFuncionario extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('funcionario');
     }
 }
